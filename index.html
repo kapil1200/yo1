@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
   <style>  html{
         scroll-behavior: smooth;
@@ -15,43 +15,23 @@
     max-width: 100%;
     overflow-x: hidden;
 }
-   #lala{
-        background-image:url(Web%201920%20%E2%80%93%202@2x.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 190vw;
-        width: 100%;
-        
-    }
-       #lalu{
-        background-image:url(Web%201920%20%E2%80%93%203@2x.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 190vw;
-        width: 100%;
-           
-    }
-      #lole{
-        background-image:url(Web%201920%20%E2%80%93%204@2x.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 140vw;
-        width: 100%;
-           
-    }
-       #lolo{
-        background-image:url(Group%2013@2x.png);
-        /*background-size: cover;
-        background-repeat: no-repeat;*/
-        height: 88vw;
-        width: 100%;
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+  
              /* Create the parallax scrolling effect */
   background-attachment: fixed;
  /* background-position: center;*/
   background-repeat: no-repeat;
   background-size: cover;
     }
-  
+      .scroll{
+          position:fixed;
+          top:0;
+          bottom: 0;
+      }
       
     
           .overlay {
@@ -128,6 +108,7 @@ span:hover{
     background: transparent;
     box-shadow: 0 0 10px orange, 0 0 40px orange, 0 0 80px orange;
 }
+      
         </style>
     </head>
     <body>
@@ -144,11 +125,13 @@ span:hover{
         
         </div>
         
-        <div id ="lala"></div>
-        <div id="lalu"></div>
-        <div id="lole"></div>
-           <div id="lolo"></div>
-            
+       <!-- <div id ="lala" loading="lazy"></div>-->
+            <img src="Web%201920%20%E2%80%93%202@2x.png" height="100%" width=100% loading="lazy" id="lala" >
+            <img src="Web%201920%20%E2%80%93%203@2x.png" height="100%" width=100% loading="lazy" id="lalu">
+            <img src="Web%201920%20%E2%80%93%204@2x.png" height="100%" width=100% loading="lazy" id ="lole">
+             <img src="Group%2013@2x.png" height="100%" width=100% loading="lazy" id="lolo">
+
+           
             
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         </header>
@@ -162,34 +145,9 @@ span:hover{
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
-    
-      
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-      
-      
-    
-      /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-          
-        
+           
+            
+       
         </script>
         
         
